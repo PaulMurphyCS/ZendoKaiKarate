@@ -146,15 +146,14 @@
   "FIRST_KYU_BROWN_COMBINATION_ONE_JAP" : "1. Mae geri, tobi komi zuki, ashi barai, gyaku zuki",
   "FIRST_KYU_BROWN_COMBINATION_TWO_JAP" : "2. (Mae geri, mawashi geri) surikomi mawashi geri jodan, ushiro mawashi geri jodan",
   "FIRST_KYU_BROWN_COMBINATION_THREE_JAP" : "3. Tobi komi zuki, gyaku zuki, surikomi (gyaku-mawashi geri, ashi barai), gyaku zuki",
-  "FIRST_KYU_BROWN_KATA" : "The candidate must prepare two from the following, and two previous kata of
+  /* "FIRST_KYU_BROWN_KATA" : "The candidate must prepare two from the following, and two previous kata of
 examiners choice:
 1. Seishan
 2. Bassai-dai
 3. Shinto
 4. Sienchin
-5. Niahanchi",
+5. Niahanchi", */
   "FIRST_KYU_BROWN_DRILL" : "The candidate must demonstrate in a formal manner frills number one, two, three, four, five and six",
-
 
   /* Kata */
   "PINAN_SHODAN" : "Pinan Shodan",

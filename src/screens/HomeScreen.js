@@ -48,7 +48,7 @@ const list = [
 
 class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-  title: <Image source={logo} style={{ width: '35%' , height: '35%' }} />
+  title: <Image source={logo} />
   })
   render() {
     return (
