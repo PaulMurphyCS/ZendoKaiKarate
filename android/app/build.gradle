@@ -94,9 +94,16 @@ def enableSeparateBuildPerCPUArchitecture = false
 def enableProguardInReleaseBuilds = false
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'my-release-key'
+            keyPassword 'Wwsbc123'
+            storeFile file('/Users/paul.murphy/Dropbox/AppDev/ZendoKaiKarate/android/app/my-release-key.jks')
+            storePassword 'Wwsbc123'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
-
     defaultConfig {
         applicationId "com.zendokaikarate"
         minSdkVersion 16
@@ -120,13 +127,16 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+        debug {
+            signingConfig signingConfigs.config
+        }
     }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // http://tools.android.com/tech-docs/new-build-system/user-guide/apk-splits
-            def versionCodes = ["armeabi-v7a":1, "x86":2]
+            def versionCodes = ["armeabi-v7a": 1, "x86": 2]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -137,9 +147,10 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: "libs", include: ["*.jar"])
-    compile "com.android.support:appcompat-v7:23.0.1"
-    compile "com.facebook.react:react-native:+"  // From node_modules
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.facebook.react:react-native:+'
+    // From node_modules
 }
 
 // Run this once to be able to run the application with BUCK

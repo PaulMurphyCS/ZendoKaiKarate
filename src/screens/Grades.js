@@ -83,7 +83,7 @@ const list = [
 
 class GradeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-     headerRight: <Button  title="Info" />,
+     // headerRight: <Button  title="Info" />,
   title: contentKey.GRADES
   })
 
