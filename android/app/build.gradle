@@ -95,10 +95,10 @@ def enableProguardInReleaseBuilds = false
 
 android {
     signingConfigs {
-        config {
-            keyAlias 'my-release-key'
+        release {
+            keyAlias 'alias_name'
             keyPassword 'Wwsbc123'
-            storeFile file('/Users/paul.murphy/Dropbox/AppDev/ZendoKaiKarate/android/app/my-release-key.jks')
+            storeFile file('/Users/paul.murphy/Dropbox/AppDev/ZendoKaiKarate/android/app/my-key.keystore')
             storePassword 'Wwsbc123'
         }
     }
@@ -126,9 +126,7 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-        }
-        debug {
-            signingConfig signingConfigs.config
+            signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
