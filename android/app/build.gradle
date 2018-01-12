@@ -96,10 +96,10 @@ def enableProguardInReleaseBuilds = false
 android {
     signingConfigs {
         release {
-            keyAlias 'alias_name'
-            keyPassword 'Wwsbc123'
-            storeFile file('/Users/paul.murphy/Dropbox/AppDev/ZendoKaiKarate/android/app/my-key.keystore')
-            storePassword 'Wwsbc123'
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storePassword MYAPP_RELEASE_STORE_PASSWORD
+            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyPassword MYAPP_RELEASE_KEY_PASSWORD
         }
     }
     compileSdkVersion 23
