@@ -113,6 +113,7 @@ signingConfigs {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+        setProperty("zendokaikarate_", + "-v" + versionCode + "(" + versionName + ")"
     }
     splits {
         abi {
@@ -127,6 +128,10 @@ signingConfigs {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
             signingConfig signingConfigs.release
+            versionNameSuffix "-R"
+        }
+        debug {
+            versionNameSuffix "-T"
         }
     }
     // applicationVariants are e.g. debug, release
