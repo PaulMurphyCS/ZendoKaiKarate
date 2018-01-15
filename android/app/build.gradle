@@ -113,7 +113,7 @@ signingConfigs {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
-        setProperty("zendokaikarate_", + "-v" + versionCode + "(" + versionName + ")"
+        setProperty("zendokaikarate_", + "-v" + versionCode + "(" + versionName + ")")
     }
     splits {
         abi {
