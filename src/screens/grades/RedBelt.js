@@ -9,24 +9,29 @@ import {
 } from 'react-native'
 
 import contentKey from '../../../content'
+import { Wrapper } from '../../components' 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
 })
 
 class RedBelt extends Component {
   static navigationOptions = ({ navigation }) => ({
-  title: contentKey.RED_BELT
+    title: contentKey.RED_BELT
   })
 
   render() {
     return (
-        <View style={styles.container}>
-          <Text>RedBelt</Text>
-        </View>
+        <Wrapper>
+          <Text>{contentKey.RED_BELT}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_STANCES}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_BLOCKS}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_BASIC_TECHNIQUES}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_NUMBERS}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_COMBINATION_TECHNIQUES}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_YOGA}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_KATA}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_DRILL}</Text>
+          <Text>{contentKey.SYLLABUS_TITLE_TEST}</Text>
+        </Wrapper>
       )
     }
 }

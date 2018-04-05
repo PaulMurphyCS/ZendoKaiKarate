@@ -8,13 +8,17 @@ import {
   Button
 } from 'react-native'
 
-import HomeMenuItems from '../components/HomeMenuItems'
+import SubMenuItems from '../components/SubMenuItems'
+import Wrapper from '../components/Wrapper'
 import contentKey from '../../content'
+const CommonStyles = require('../../styles/common')
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: CommonStyles.styles.colorMainBg
   }
 })
 
@@ -22,17 +26,20 @@ const list = [
   {
     key: '1',
     title: contentKey.RED_BELT,
-    link: 'RedBelt'
+    link: 'RedBelt',
+    bgColor: CommonStyles.styles.colorRedBelt
   },
   {
     key: '2',
     title: contentKey.YELLOW_BELT,
-    link: 'YellowBelt'
+    link: 'YellowBelt',
+    bgColor: CommonStyles.styles.colorYellowBelt
   },
   {
     key: '3',
     title: contentKey.ORANGE_BELT,
-    link: 'OrangeBelt'
+    link: 'OrangeBelt',
+    bgColor: CommonStyles.styles.colorOrangeBelt
   },
   {
     key: '4',
@@ -83,25 +90,26 @@ const list = [
 
 class GradeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-     // headerRight: <Button  title="Info" />,
-  title: contentKey.GRADES
+     headerRight: <Button  title="Info" />,
+     title: contentKey.GRADES
   })
 
   render() {
     return (
-        <View style={styles.container}>
+        <Wrapper style={styles.container}>
           <FlatList
             data={list}
             renderItem={
               ({item}) =>
-              <HomeMenuItems
-              title={item.title}
-              link={item.link}
-              navigation={this.props.navigation}
+              <SubMenuItems
+                title={item.title}
+                link={item.link}
+                navigation={this.props.navigation}
+                bgColor={item.bgColor}
               />
             }
           />
-        </View>
+        </Wrapper>
       )
     }
 }

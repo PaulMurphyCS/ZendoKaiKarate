@@ -1,11 +1,18 @@
 import React from 'react'
-import RootNavigator from './router'
-import Menu from './Menu'
+import {
+  StatusBar,
+  View
+} from 'react-native'
 
-const menu = <Menu />
+import RootNavigator from './router'
 
 const App = () => (
-  <RootNavigator />
+  <View style={{flex: 1}}>
+    <StatusBar
+      barStyle="light-content"
+    />
+    <RootNavigator />
+  </View>
 )
 
 export default App

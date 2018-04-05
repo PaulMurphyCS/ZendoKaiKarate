@@ -22,7 +22,11 @@ import OrangeBelt from './screens/grades/OrangeBelt'
 import contentKey from '../content'
 import hamburger from './images/hamburger_.png'
 import logo from './images/logo.png'
+const CommonStyles = require('../styles/common')
 
+const hamburgerStyle = {
+  marginLeft: 10
+}
 const DrawerStack = DrawerNavigator({
   Home: { screen: HomeScreen },
   Grades: { screen: Grades },
@@ -37,7 +41,7 @@ const DrawerNavigation = StackNavigator({
 }, {
   headerMode: 'none',
   navigationOptions: ({navigation}) => ({
-    headerStyle: {backgroundColor: 'grey'},
+    headerStyle: {backgroundColor: CommonStyles.styles.colorStatusBar},
     headerLeft: <TouchableOpacity
       onPress={() => {
       if (navigation.state.index === 0) {
@@ -45,7 +49,10 @@ const DrawerNavigation = StackNavigator({
       } else {
         navigation.navigate('DrawerClose')
       }}}>
-      <Image source={hamburger} />
+      <Image
+        source={hamburger}
+        style={hamburgerStyle}
+      />
     </TouchableOpacity>
   })
 })
@@ -59,7 +66,14 @@ const PrimaryNav = StackNavigator({
   drawerStack: { screen: DrawerNavigation }
 }, {
   headerMode: 'float',
-  initialRouteName: 'drawerStack'
+  initialRouteName: 'drawerStack',
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: CommonStyles.styles.colorStatusBar
+    },
+    headerTintColor: '#FFFFFF',
+    headerBackTitle: 'Back'
+  }
 })
 
 export default PrimaryNav

@@ -11,31 +11,29 @@ import {
 const CommonStyles = require('../../../styles/common')
 
 const width = Dimensions.get('window').width
-const height = Dimensions.get('window').height
 
 const styles = StyleSheet.create({
   homeBoxWrapper: {
-    backgroundColor: CommonStyles.styles.colorYellow,
-    width: (width / 2) - 30,
-    marginVertical: 15,
-    height: (height / 4.5),
+    width: width - 30,
+    marginVertical: 10,
+    height: 60,
     marginHorizontal: 15,
-    padding: 15
+    padding: 20
   },
   homeBoxText: {
-    color: CommonStyles.styles.colorBlack,
-    textAlign:'center',
+    color: CommonStyles.styles.colorWhite,
+    textAlign:'left',
     fontSize: 16
   }
 })
 
-class HomeMenuItems extends Component {
+class SubMenuItems extends Component {
   constructor(props) {
     super(props)
-    this.HomeMenuItemsLink = this.HomeMenuItemsLink.bind(this)
+    this.SubMenuItemsLink = this.SubMenuItemsLink.bind(this)
   }
 
-  HomeMenuItemsLink = () => {
+  SubMenuItemsLink = () => {
     this.props.navigation.navigate(this.props.link)
   }
 
@@ -43,9 +41,9 @@ class HomeMenuItems extends Component {
     return (
       <View >
         <TouchableOpacity
-          onPress={this.HomeMenuItemsLink}
+          onPress={this.SubMenuItemsLink}
           title={this.props.title}
-          style={styles.homeBoxWrapper}
+          style={[{ backgroundColor: this.props.bgColor }, styles.homeBoxWrapper ] }
         >
           <Text style={styles.homeBoxText}>
             {this.props.title}
@@ -56,11 +54,12 @@ class HomeMenuItems extends Component {
   }
 }
 
-HomeMenuItems.propTypes = {
+SubMenuItems.propTypes = {
   title: PropTypes.string.isRequired,
   link: PropTypes.string,
-  navigation: PropTypes.object
+  navigation: PropTypes.object,
+  bgColor: PropTypes.string
 }
 
 
-export default HomeMenuItems
+export default SubMenuItems

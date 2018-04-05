@@ -12,12 +12,13 @@
   "SYLLABUS_TITLE_STANCES" : "Stances",
   "SYLLABUS_TITLE_BLOCKS" : "Blocks",
   "SYLLABUS_TITLE_BASIC_TECHNIQUES" : "Basic Techniques",
-  "SYLLABUS_TITLE_NUMBERS" : "NUMBERS",
+  "SYLLABUS_TITLE_NUMBERS" : "Numbers",
   "SYLLABUS_TITLE_COMBINATION_TECHNIQUES" : "Combination Techniques",
   "SYLLABUS_TITLE_YOGA" : "Yoga",
   "SYLLABUS_TITLE_KATA" : "Kata",
   "SYLLABUS_TITLE_DRILL" : "Drill",
   "SYLLABUS_TITLE_TEST" : "Test",
+  /* RED BELT */
   "RED_BELT" : "Red Belt",
   "PRIMARY_SCHOOL" : "Primary School Children Only",
   "STANCES" : "Stances",
@@ -37,6 +38,7 @@
   "RED_TECHNIQUES_THREE" : "3. Front Kick",
   "RED_NUMBERS_TITLE" : "One to Ten in Japanese",
   "RED_NUMBERS" : "Ichi, Ni, Sun, Shi, Go, Roku, Shi chi, Ha chi, Ku, Ju",
+  /* Yellow Belt */
   "YELLOW_BELT" : "Yellow Belt",
   "YELLOW_TECHNIQUES_ONE_ENG" : "Front punch",
   "YELLOW_TECHNIQUES_ONE_JAP" : "1. Jun zuki",
@@ -60,6 +62,7 @@
   "YELLOW_BLOCK_THREE_JAP" : "4. Soto uke",
   "YELLOW_BLOCK_FOUR_ENG" : "Knife hand block",
   "YELLOW_BLOCK_THREE_JAP" : "5. Shuto uke",
+  /* Orange Belt */
   "ORANGE_BELT" : "Orange Belt",
   "ORANGE_YOGA" : "Surya namaskara 'A'",
   "ORANGE_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki",
@@ -77,6 +80,7 @@
   "ORANGE_BLOCK_FIVE_JAP" : "5. Tetsui uke in hanmi nekoashi dachi",
   "ORANGE_KATA" : "Pinan Shodan",
   "ORANGE_DRILL" : "The candidate must demonstrate in a formal manner drill number one",
+  /* Green Belt */
   "GREEN_BELT" : "Green Belt",
   "GREEN_YOGA" : "Surya namaskara 'A'",
   "GREEN_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki no-tsukkomi",
@@ -89,6 +93,7 @@
   "GREEN_COMBINATION_THREE_JAP" : "3. Mae geri, tobi komi zuki, kuti, tobi komi zuki, mawashi geri",
   "GREEN_KATA" : "Pinan Nidan and previous kata",
   "GREEN_DRILL" : "The candidate must demonstrate in a formal manner drills number one and two",
+  /* Blue Belt */
   "BLUE_YOGA" : "Surya namaskara 'B'",
   "BLUE_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki no-tsukkomi",
   "BLUE_TECHNIQUES_TWO_JAP" : "2. Kette gyaku zuki no-tsukkomi",
@@ -101,6 +106,7 @@
   "BLUE_COMBINATION_THREE_JAP" : "1. Tobi komi zuki jodan, gyaku zuki chudan",
   "BLUE_KATA" : "Pinan Sandan and previous kata",
   "BLUE_DRILL" : "The candidate must demonstrate in a formal manner drills number one, two and three",
+  /* Purple Belt */
   "PURPLE_YOGA" : "Surya namaskara 'B'",
   "PURPLE_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki no-tsukkomi",
   "PURPLE_TECHNIQUES_TWO_JAP" : "2. Kette gyaku zuki no-tsukkomi",
@@ -112,6 +118,7 @@
   "PURPLE_COMBINATION_TWO_JAP" : "2. (Yoko geri, mawashi geri, sokuto) ushiro geri, gyaku zuki",
   "PURPLE_COMBINATION_THREE_JAP" : "3. Mae geri, mawashi geri, ushiro geri, gyaku zuki chudan",
   "PURPLE_KATA" : "Pinan Yodan and previous kata",
+  /* 3rd KYU Brown Belt */
   "THIRD_KYU_BROWN_YOGA" : "Surya namaskara 'B'",
   "THIRD_KYU_BROWN_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki no-tsukkomi",
   "THIRD_KYU_BROWN_TECHNIQUES_TWO_JAP" : "2. Kette gyaku zuki no-tsukkomi",
@@ -123,6 +130,7 @@
   "THIRD_KYU_BROWN_COMBINATION_TWO_JAP" : "2. (Yoko geri, mawashi geri, sokuto) ushiro geri, gyaku zuki",
   "THIRD_KYU_BROWN_COMBINATION_THREE_JAP" : "3. Mae geri, mawashi geri, ushiro geri, gyaku zuki chudan",
   "THIRD_KYU_BROWN_KATA" : "Pinan Godan and previous kata",
+  /* 2nd KYU Brown Belt */
   "SECOND_KYU_BROWN_YOGA" : "Surya namaskara 'A' and 'B'",
   "SECOND_KYU_BROWN_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki no-tsukkomi",
   "SECOND_KYU_BROWN_TECHNIQUES_TWO_JAP" : "2. Kette gyaku zuki no-tsukkomi",
@@ -135,7 +143,7 @@
   "SECOND_KYU_BROWN_COMBINATION_THREE_JAP" : "3. Surikomi sokuto jodan, ushiro geri chudan, uraken jodan",
   "SECOND_KYU_BROWN_KATA" : "Ku Shanku plus all previous kata",
   "SECOND_KYU_BROWN_DRILL" : "The candidate must demonstrate in a formal manner frills number one, two, three, four, five and six",
-
+  /* 1st KYU Brown Belt */
   "FIRST_KYU_BROWN_YOGA" : "Surya namaskara 'A' and 'B'",
   "FIRST_KYU_BROWN_TECHNIQUES_ONE_JAP" : "1. Kette jun zuki no-tsukkomi",
   "FIRST_KYU_BROWN_TECHNIQUES_TWO_JAP" : "2. Kette gyaku zuki no-tsukkomi",
@@ -154,7 +162,22 @@ examiners choice:
 4. Sienchin
 5. Niahanchi", */
   "FIRST_KYU_BROWN_DRILL" : "The candidate must demonstrate in a formal manner frills number one, two, three, four, five and six",
-
+  /* 1st Dan Black Belt */
+  "BLACK_BELT_TEST" : "Written exam (30 minutes), questions will be taken from the syllabus and from arious works of zen",
+  "BLACK_BELT_YOGA" : "Surya namaskara A and B",
+  "BLACK_BELT_BASIC_TECHNIQUES" : "A selection of punches, kicks etc will be taken from the syllabus",
+  "BLACK_BELT_COMBINATION_ONE_JAP" : "1. Tobi komi zuki jodan, gyaku zuki chudan, surikomi mawashi geri, mawatte uraken jodan, ushiro geri chudan, jodan uke, gyaku zuki chudan, ashi-barai, gyaku zuki jodan",
+  "BLACK_BELT_COMBINATION_TWO_JAP" : "2. Surikomi mae geri chudan, mawashi geri chudan, ushiro geri-hiza, ushiro empi jodan, ushiro uraken jodan, ushiro uraken jodan, kizami zuki chudan",
+  "BLACK_BELT_COMBINATION_THREE_JAP" : "3. Tobi komi zuki jodan, gyaku zuki jodan, haito jodan, shuto gamen, nukite chudan, age empi gamen, hiza geri chudan kuti",
+  "BLACK_BELT_COMBINATION_FOUR_JAP" : "4. Shomen nekoashi-dachi, kakete, (yoko sokuto fumikomi-hiza, mae geri chudan), soto uke chudan, gyaku zuki chudan, yoko uraken jodan, shuto uchi gamen, kakete chudan",
+  "BLACK_BELT_COMBINATION_FIVE_JAP" : "5. Mae geri kekomi chudan, kuti gedan barai, morote barai, uraken jodan (from kneeling), gyaku zuki chudan (from kneeling), empi gamen, mawashi empi jodan, mawashi empi jodan",
+  /* "FIRST_DAN_BLACK_KATA" : "The candidate must prepare three from the following:
+1. Sochin 3. Enpi
+5. Nijushiho
+2. Gojushiho (sho) 4. Seipei
+6. Unsu", */
+  "FIRST_DAN_BLACK_DRILL" : "The candidate must demonstrate in a formal manner frills number one, two, three, four, five and six",
+  "FIRST_DAN_BLACK_KUMITE" : "Two competition rounds each of two minutes in duration Three x ve minute kumite with varying opponents",
   /* Kata */
   "PINAN_SHODAN" : "Pinan Shodan",
   "PINAN_NIDAN" : "Pinan Nidan",

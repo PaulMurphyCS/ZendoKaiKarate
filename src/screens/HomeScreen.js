@@ -13,8 +13,11 @@ import contentKey from '../../content'
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
+    flexDirection: 'row'
+  },
+  imagelogo: {
+    width: 40,
+    height: 40
   }
 })
 
@@ -48,19 +51,20 @@ const list = [
 
 class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-  title: <Image source={logo} />
+    title: <Image source={logo} style={styles.imagelogo} />
   })
   render() {
     return (
         <View style={styles.container}>
           <FlatList
             data={list}
+            numColumns={2}
             renderItem={
               ({item}) =>
               <HomeMenuItems
-              title={item.title}
-              link={item.link}
-              navigation={this.props.navigation}
+                title={item.title}
+                link={item.link}
+                navigation={this.props.navigation}
               />
             }
           />
