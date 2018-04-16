@@ -8,13 +8,15 @@ import {
   Button
 } from 'react-native'
 
-import HomeMenuItems from '../components/HomeMenuItems'
+import { SubMenuItems } from '../components'
 import contentKey from '../../content'
+const CommonStyles = require('../../styles/common')
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: CommonStyles.styles.colorMainBg
   }
 })
 
@@ -118,7 +120,7 @@ class KataScreen extends Component {
             data={list}
             renderItem={
               ({item}) =>
-              <HomeMenuItems
+              <SubMenuItems
               title={item.title}
               link={item.link}
               navigation={this.props.navigation}

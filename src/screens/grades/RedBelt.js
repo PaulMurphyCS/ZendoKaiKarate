@@ -9,10 +9,32 @@ import {
 } from 'react-native'
 
 import contentKey from '../../../content'
-import { Wrapper } from '../../components' 
+import { Wrapper, Title } from '../../components/'
 const styles = StyleSheet.create({
 })
 
+
+const stanceList = [
+  { key: '1', text: contentKey.RED_STANCE_ONE },
+  { key: '2', text: contentKey.RED_STANCE_TWO },
+  { key: '3', text: contentKey.RED_STANCE_THREE },
+  { key: '4', text: contentKey.RED_STANCE_FOUR },
+  { key: '5', text: contentKey.RED_STANCE_FIVE },
+  { key: '6', text: contentKey.RED_STANCE_SIX }
+]
+
+const blockList = [
+  { key: '1', text: contentKey.RED_BLOCK_ONE },
+  { key: '2', text: contentKey.RED_BLOCK_TWO },
+  { key: '3', text: contentKey.RED_BLOCK_THREE },
+  { key: '4', text: contentKey.RED_BLOCK_FOUR }
+]
+
+const techniqueList = [
+  { key: '1', text: contentKey.RED_TECHNIQUES_ONE },
+  { key: '2', text: contentKey.RED_TECHNIQUES_TWO },
+  { key: '3', text: contentKey.RED_TECHNIQUES_THREE }
+]
 class RedBelt extends Component {
   static navigationOptions = ({ navigation }) => ({
     title: contentKey.RED_BELT
@@ -21,16 +43,34 @@ class RedBelt extends Component {
   render() {
     return (
         <Wrapper>
-          <Text>{contentKey.RED_BELT}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_STANCES}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_BLOCKS}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_BASIC_TECHNIQUES}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_NUMBERS}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_COMBINATION_TECHNIQUES}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_YOGA}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_KATA}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_DRILL}</Text>
-          <Text>{contentKey.SYLLABUS_TITLE_TEST}</Text>
+          <Title>{contentKey.SYLLABUS_TITLE_STANCES}</Title>
+          <FlatList
+            data={stanceList}
+            renderItem={
+              ({item}) =>
+              <Text>{item.key}. {item.text}</Text>
+            }
+          />
+          <Title>{contentKey.SYLLABUS_TITLE_BLOCKS}</Title>
+          <FlatList
+            data={blockList}
+            renderItem={
+              ({item}) =>
+              <Text>{item.key}. {item.text}</Text>
+            }
+          />
+          <Text>{contentKey.RED_BLOCKS_NOTICE}</Text>
+          <Title>{contentKey.SYLLABUS_TITLE_BASIC_TECHNIQUES}</Title>
+          <FlatList
+            data={techniqueList}
+            renderItem={
+              ({item}) =>
+              <Text>{item.key}. {item.text}</Text>
+            }
+          />
+          <Title>{contentKey.SYLLABUS_TITLE_NUMBERS}</Title>
+          <Text>{contentKey.RED_NUMBERS_SUBHEADING}</Text>
+          <Text>{contentKey.RED_NUMBERS}</Text>
         </Wrapper>
       )
     }

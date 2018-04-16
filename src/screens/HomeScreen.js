@@ -8,7 +8,7 @@ import {
   Button
 } from 'react-native'
 import logo from '../images/logo.png'
-import HomeMenuItems from '../components/HomeMenuItems'
+import { HomeMenuItems } from '../components'
 import contentKey from '../../content'
 const styles = StyleSheet.create({
   container: {

@@ -19,6 +19,13 @@ import Translations from './screens/Translations'
 import RedBelt from './screens/grades/RedBelt'
 import YellowBelt from './screens/grades/YellowBelt'
 import OrangeBelt from './screens/grades/OrangeBelt'
+import GreenBelt from './screens/grades/GreenBelt'
+import BlueBelt from './screens/grades/BlueBelt'
+import PurpleBelt from './screens/grades/PurpleBelt'
+import BrownBeltThird from './screens/grades/BrownBeltThird'
+import BrownBeltSecond from './screens/grades/BrownBeltSecond'
+import BrownBeltFirst from './screens/grades/BrownBeltFirst'
+import BlackBelt from './screens/grades/BlackBelt'
 import contentKey from '../content'
 import hamburger from './images/hamburger_.png'
 import logo from './images/logo.png'
@@ -60,13 +67,25 @@ const DrawerNavigation = StackNavigator({
 // Manifest of possible screens
 const PrimaryNav = StackNavigator({
   Home: { screen: HomeScreen },
+  Grades: { screen: Grades },
+  Kata: { screen: Kata },
+  Drills: { screen: Drills },
+  Stances: { screen: Stances },
+  Translations: { screen: Translations  },
   RedBelt: { screen: RedBelt },
   YellowBelt: { screen: YellowBelt },
   OrangeBelt: { screen: OrangeBelt },
-  drawerStack: { screen: DrawerNavigation }
+  GreenBelt: { screen: GreenBelt },
+  BlueBelt: { screen: BlueBelt },
+  PurpleBelt: { screen: PurpleBelt },
+  BrownBeltThird: { screen: BrownBeltThird },
+  BrownBeltSecond: { screen: BrownBeltSecond },
+  BrownBeltFirst: { screen: BrownBeltFirst},
+  BlackBelt: { screen: BlackBelt},
+  // drawerStack: { screen: DrawerNavigation }
 }, {
   headerMode: 'float',
-  initialRouteName: 'drawerStack',
+  initialRouteName: 'Home',
   navigationOptions: {
     headerStyle: {
       backgroundColor: CommonStyles.styles.colorStatusBar

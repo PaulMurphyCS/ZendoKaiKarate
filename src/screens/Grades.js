@@ -8,8 +8,7 @@ import {
   Button
 } from 'react-native'
 
-import SubMenuItems from '../components/SubMenuItems'
-import Wrapper from '../components/Wrapper'
+import { SubMenuItems } from '../components'
 import contentKey from '../../content'
 const CommonStyles = require('../../styles/common')
 
@@ -22,83 +21,29 @@ const styles = StyleSheet.create({
   }
 })
 
-const list = [
-  {
-    key: '1',
-    title: contentKey.RED_BELT,
-    link: 'RedBelt',
-    bgColor: CommonStyles.styles.colorRedBelt
-  },
-  {
-    key: '2',
-    title: contentKey.YELLOW_BELT,
-    link: 'YellowBelt',
-    bgColor: CommonStyles.styles.colorYellowBelt
-  },
-  {
-    key: '3',
-    title: contentKey.ORANGE_BELT,
-    link: 'OrangeBelt',
-    bgColor: CommonStyles.styles.colorOrangeBelt
-  },
-  {
-    key: '4',
-    title: 'Green Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '5',
-    title: 'Blue Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '6',
-    title: 'Purple Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '7',
-    title: 'Brown Belt 3rd ku',
-    link: 'RedBelt'
-  },
-  {
-    key: '8',
-    title: 'Brown Belt 2nd ku',
-    link: 'RedBelt'
-  },
-  {
-    key: '9',
-    title: 'Brown Belt 1st ku',
-    link: 'RedBelt'
-  },
-  {
-    key: '10',
-    title: 'Black Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '11',
-    title: 'Translations',
-    link: 'RedBelt'
-  },
-  {
-    key: '12',
-    title: 'Stances',
-    link: 'RedBelt'
-  }
+const gradeList = [
+  { key: '1', title: contentKey.RED_BELT, link: 'RedBelt', bgColor: CommonStyles.styles.colorRedBelt },
+  { key: '2', title: contentKey.YELLOW_BELT, link: 'YellowBelt', bgColor: CommonStyles.styles.colorYellowBelt },
+  { key: '3', title: contentKey.ORANGE_BELT, link: 'OrangeBelt', bgColor: CommonStyles.styles.colorOrangeBelt },
+  { key: '4', title: contentKey.GREEN_BELT, link: 'GreenBelt', bgColor: CommonStyles.styles.colorGreenBelt },
+  { key: '5', title: contentKey.BLUE_BELT, link: 'BlueBelt', bgColor: CommonStyles.styles.colorBlueBelt },
+  { key: '6', title: contentKey.PURPLE_BELT, link: 'PurpleBelt', bgColor: CommonStyles.styles.colorPurpleBelt },
+  { key: '7', title: contentKey.THIRD_KYU_BROWN_BELT, link: 'BrownBeltThird', bgColor: CommonStyles.styles.colorBrownBelt },
+  { key: '8', title: contentKey.SECOND_KYU_BROWN_BELT, link: 'BrownBeltSecond', bgColor: CommonStyles.styles.colorBrownBelt },
+  { key: '9', title: contentKey.FIRST_KYU_BROWN_BELT, link: 'BrownBeltFirst', bgColor: CommonStyles.styles.colorBrownBelt },
+  { key: '10', title: contentKey.FIRST_DAN_BLACK_BELT, link: 'BlackBelt', bgColor: CommonStyles.styles.colorBlackBelt }
 ]
 
 class GradeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-     headerRight: <Button  title="Info" />,
      title: contentKey.GRADES
   })
 
   render() {
     return (
-        <Wrapper style={styles.container}>
+        <View style={styles.container}>
           <FlatList
-            data={list}
+            data={gradeList}
             renderItem={
               ({item}) =>
               <SubMenuItems
@@ -109,7 +54,7 @@ class GradeScreen extends Component {
               />
             }
           />
-        </Wrapper>
+        </View>
       )
     }
 }
