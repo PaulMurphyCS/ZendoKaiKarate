@@ -207,6 +207,7 @@
   "UNSU" : "Unsu",
   /* Translations */
   /* MISCELLANEOUS TERMINOLOGY */
+  "MISCELLANEOUS_TITLE" : "Miscellaneous Terminology",
   "MISCELLANEOUS_ONE_ENG" : "Formal Exercise",
   "MISCELLANEOUS_ONE_JAP" : "Kata",
   "MISCELLANEOUS_TWO_ENG" : "Sparring",
@@ -219,4 +220,24 @@
   "MISCELLANEOUS_FIVE_JAP" : "Sempai",
   "MISCELLANEOUS_SIX_ENG" : "Instructor",
   "MISCELLANEOUS_SIX_JAP" : "Sensei",
+  "MISCELLANEOUS_SEVEN_ENG" : "Training Area",
+  "MISCELLANEOUS_SEVEN_JAP" : "Dojo",
+  "MISCELLANEOUS_EIGHT_ENG" : "Student of karate",
+  "MISCELLANEOUS_EIGHT_JAP" : "Karateka",
+  "MISCELLANEOUS_NINE_ENG" : "Forward facing",
+  "MISCELLANEOUS_NINE_JAP" : "Shomen",
+  "MISCELLANEOUS_TEN_ENG" : "Half Turned",
+  "MISCELLANEOUS_TEN_JAP" : "Hanmi",
+  "MISCELLANEOUS_ELEVEN_ENG" : "Focus and correct use of power",
+  "MISCELLANEOUS_ELEVEN_JAP" : "Cha-ku-gan",
+  /* Part of Body */
+  "BODY_TITLE" : "Body Area",
+  "BODY_ONE_ENG" : "Side of jaw",
+  "BODY_ONE_JAP" : "Gamen",
+  "BODY_TWO_ENG" : "Head ( or upper body)",
+  "BODY_TWO_JAP" : "Jodan",
+  "BODY_THREE_ENG" : "Middle Body",
+  "BODY_THREE_JAP" : "Chudan",
+  "BODY_FOUR_ENG" : "Lower Body",
+  "BODY_FOUR_JAP" : "Gedan",
 }
