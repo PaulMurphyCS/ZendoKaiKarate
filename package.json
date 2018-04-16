@@ -6,9 +6,11 @@
     "elint": "eslint . — ext .js — ext .jsx — cache || true",
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "android-debug": "npm run react-native run-android",
-    "android-release": "npm run react-native run-android --variant=localRelease",
-    "android-apk": "cd android && ./gradlew assembleLocalRelease && cd .."
+    "android-debug": "run-android",
+    "android-release": "run-android --variant=localRelease",
+    "android-apk": "cd android && ./gradlew assembleLocalRelease && cd ..",
+    "android-apk-local-fastlane": "fastlane android betaLocal"
+
   },
   "dependencies": {
     "react": "16.0.0",
