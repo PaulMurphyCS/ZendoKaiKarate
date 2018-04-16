@@ -81,7 +81,7 @@ const PrimaryNav = StackNavigator({
   BrownBeltThird: { screen: BrownBeltThird },
   BrownBeltSecond: { screen: BrownBeltSecond },
   BrownBeltFirst: { screen: BrownBeltFirst},
-  BlackBelt: { screen: BlackBelt},
+  BlackBelt: { screen: BlackBelt}
   // drawerStack: { screen: DrawerNavigation }
 }, {
   headerMode: 'float',

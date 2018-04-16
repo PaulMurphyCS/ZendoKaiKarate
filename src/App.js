@@ -1,13 +1,18 @@
 import React from 'react'
 import {
   StatusBar,
-  View
+  View,
+  StyleSheet
 } from 'react-native'
 
 import RootNavigator from './router'
-
+const styles = StyleSheet.create({
+  statusBar: {
+    flex: 1
+  }
+})
 const App = () => (
-  <View style={{flex: 1}}>
+  <View style={styles.statusBar}>
     <StatusBar
       barStyle="light-content"
     />

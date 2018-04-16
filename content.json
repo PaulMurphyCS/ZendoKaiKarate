@@ -169,7 +169,7 @@
   "FIRST_KYU_BROWN_KATA_FIVE" : "Niahanchi",
   "FIRST_KYU_BROWN_DRILL" : "The candidate must demonstrate in a formal manner frills number one, two, three, four, five and six",
   /* 1st Dan Black Belt */
-  "FIRST_DAN_BLACK_BELT" : "Brown Belt 1st Kyu",
+  "FIRST_DAN_BLACK_BELT" : "Black Belt 1st Dan",
   "FIRST_DAN_BLACK_TEST" : "Written exam (30 minutes), questions will be taken from the syllabus and from arious works of zen",
   "FIRST_DAN_BLACK_YOGA" : "Surya namaskara A and B",
   "FIRST_DAN_BLACK_BASIC_TECHNIQUES" : "A selection of punches, kicks etc will be taken from the syllabus",
@@ -205,4 +205,18 @@
   "GOJUSHIHO" : "Gojushiho (sho)",
   "SEIPEI" : "Seipei",
   "UNSU" : "Unsu",
+  /* Translations */
+  /* MISCELLANEOUS TERMINOLOGY */
+  "MISCELLANEOUS_ONE_ENG" : "Formal Exercise",
+  "MISCELLANEOUS_ONE_JAP" : "Kata",
+  "MISCELLANEOUS_TWO_ENG" : "Sparring",
+  "MISCELLANEOUS_TWO_JAP" : "Kumite",
+  "MISCELLANEOUS_THREE_ENG" : "Semi-free sparring",
+  "MISCELLANEOUS_THREE_JAP" : "Ji yu kumite",
+  "MISCELLANEOUS_FOUR_ENG" : "Semi-free sparring",
+  "MISCELLANEOUS_FOUR_JAP" : "Ohyo gummite",
+  "MISCELLANEOUS_FIVE_ENG" : "Assistant instructor",
+  "MISCELLANEOUS_FIVE_JAP" : "Sempai",
+  "MISCELLANEOUS_SIX_ENG" : "Instructor",
+  "MISCELLANEOUS_SIX_JAP" : "Sensei",
 }
