@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 
 import contentKey from '../../../content'
-import { Wrapper, Title } from '../../components/'
+import { Wrapper, Title, Row, Column } from '../../components/'
 
 const styles = StyleSheet.create({
 
@@ -36,13 +36,17 @@ class BlueBelt extends Component {
     return (
       <Wrapper>
         <Title>{contentKey.SYLLABUS_TITLE_YOGA}</Title>
-        <Text>{contentKey.BLUE_YOGA}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.BLUE_YOGA}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_BASIC_TECHNIQUES}</Title>
         <FlatList
           data={techniqueList}
           renderItem={
             ({item}) =>
-            <Text>{item.key}. {item.textJap}</Text>
+            <Row>
+              <Column numberOfColumns={1}>{item.key}. {item.textJap}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_COMBINATION_TECHNIQUES}</Title>
@@ -50,13 +54,19 @@ class BlueBelt extends Component {
           data={combinationList}
           renderItem={
             ({item}) =>
-            <Text>{item.key}. {item.textJap}</Text>
+            <Row>
+              <Column numberOfColumns={1}>{item.key}. {item.textJap}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_KATA}</Title>
-        <Text>{contentKey.BLUE_KATA}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.BLUE_KATA}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_DRILL}</Title>
-        <Text>{contentKey.BLUE_DRILL}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.BLUE_DRILL}</Column>
+        </Row>
       </Wrapper>
     )
   }

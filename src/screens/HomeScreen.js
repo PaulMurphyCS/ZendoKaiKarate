@@ -40,7 +40,7 @@ const list = [
   {
     key: '4',
     title: contentKey.TRANSLATIONS,
-    link: 'grades/RedBelt'
+    link: 'Translations'
   },
   {
     key: '5',

@@ -3,13 +3,17 @@ import {
   View,
   Text,
   FlatList,
+  Dimensions,
   StyleSheet
 } from 'react-native'
 
 import contentKey from '../../../content'
-import { Wrapper, Title } from '../../components/'
+import { Wrapper, Title, Row, Column } from '../../components/'
 
 const styles = StyleSheet.create({
+ japanese: {
+   fontStyle: 'italic'
+ }
 
 })
 
@@ -46,10 +50,10 @@ class YellowBelt extends Component {
           data={techniqueList}
           renderItem={
             ({item}) =>
-            <View>
-              <Text class={styles.japanese}>{item.key}. {item.textJap}</Text>
-              <Text class={styles.english}>{item.textEng}</Text>
-            </View>
+            <Row>
+              <Column numberOfColumns={2} style={[styles.japanese, styles.column]}>{item.key}. {item.textJap}</Column>
+              <Column numberOfColumns={2} style={styles.english, styles.column}>{item.textEng}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_COMBINATION_TECHNIQUES}</Title>
@@ -57,10 +61,10 @@ class YellowBelt extends Component {
           data={combinationList}
           renderItem={
             ({item}) =>
-            <View>
-              <Text class={styles.japanese}>{item.key}. {item.textJap}</Text>
-              <Text class={styles.english}>{item.textEng}</Text>
-            </View>
+            <Row>
+              <Column numberOfColumns={2} style={styles.japanese}>{item.key}. {item.textJap}</Column>
+              <Column numberOfColumns={2} style={styles.english}>{item.textEng}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_BLOCKS}</Title>
@@ -68,10 +72,10 @@ class YellowBelt extends Component {
           data={blockList}
           renderItem={
             ({item}) =>
-            <View>
-              <Text class={styles.japanese}>{item.key}. {item.textJap}</Text>
-              <Text class={styles.english}>{item.textEng}</Text>
-            </View>
+            <Row>
+              <Column numberOfColumns={2} style={styles.japanese}>{item.key}. {item.textJap}</Column>
+              <Column numberOfColumns={2} style={styles.english}>{item.textEng}</Column>
+            </Row>
           }
         />
       </Wrapper>

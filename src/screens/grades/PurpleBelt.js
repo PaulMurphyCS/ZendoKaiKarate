@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 
 import contentKey from '../../../content'
-import { Wrapper, Title } from '../../components/'
+import { Wrapper, Title, Row, Column } from '../../components/'
 
 const styles = StyleSheet.create({
 
@@ -18,8 +18,7 @@ const techniqueList = [
   { key: '2', textJap: contentKey.PURPLE_TECHNIQUES_TWO_JAP },
   { key: '3', textJap: contentKey.PURPLE_TECHNIQUES_THREE_JAP },
   { key: '4', textJap: contentKey.PURPLE_TECHNIQUES_FOUR_JAP },
-  { key: '5', textJap: contentKey.PURPLE_TECHNIQUES_FIVE_JAP },
-  { key: '6', textJap: contentKey.PURPLE_TECHNIQUES_SIX_JAP }
+  { key: '5', textJap: contentKey.PURPLE_TECHNIQUES_FIVE_JAP }
 ]
 
 const combinationList = [
@@ -36,13 +35,17 @@ class PurpleBelt extends Component {
     return (
       <Wrapper>
         <Title>{contentKey.SYLLABUS_TITLE_YOGA}</Title>
-        <Text>{contentKey.PURPLE_YOGA}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.PURPLE_YOGA}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_BASIC_TECHNIQUES}</Title>
         <FlatList
           data={techniqueList}
           renderItem={
             ({item}) =>
-            <Text>{item.key}. {item.textJap}</Text>
+            <Row>
+              <Column numberOfColumns={1}>{item.key}. {item.textJap}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_COMBINATION_TECHNIQUES}</Title>
@@ -50,13 +53,19 @@ class PurpleBelt extends Component {
           data={combinationList}
           renderItem={
             ({item}) =>
-            <Text>{item.key}. {item.textJap}</Text>
+            <Row>
+              <Column numberOfColumns={1}>{item.key}. {item.textJap}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_KATA}</Title>
-        <Text>{contentKey.PURPLE_KATA}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.PURPLE_KATA}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_DRILL}</Title>
-        <Text>{contentKey.PURPLE_DRILL}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.PURPLE_DRILL}</Column>
+        </Row>
       </Wrapper>
     )
   }

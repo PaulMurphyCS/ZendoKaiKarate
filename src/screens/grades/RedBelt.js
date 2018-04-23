@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 
 import contentKey from '../../../content'
-import { Wrapper, Title } from '../../components/'
+import { Wrapper, Title, Row, Column } from '../../components/'
 const styles = StyleSheet.create({
 })
 
@@ -48,7 +48,9 @@ class RedBelt extends Component {
             data={stanceList}
             renderItem={
               ({item}) =>
-              <Text>{item.key}. {item.text}</Text>
+              <Row>
+                <Column numberOfColumns={1}>{item.key}. {item.text}</Column>
+              </Row>
             }
           />
           <Title>{contentKey.SYLLABUS_TITLE_BLOCKS}</Title>
@@ -56,7 +58,9 @@ class RedBelt extends Component {
             data={blockList}
             renderItem={
               ({item}) =>
-              <Text>{item.key}. {item.text}</Text>
+              <Row>
+                <Column numberOfColumns={1}>{item.key}. {item.text}</Column>
+              </Row>
             }
           />
           <Text>{contentKey.RED_BLOCKS_NOTICE}</Text>
@@ -65,12 +69,16 @@ class RedBelt extends Component {
             data={techniqueList}
             renderItem={
               ({item}) =>
-              <Text>{item.key}. {item.text}</Text>
+              <Row>
+                <Column numberOfColumns={1}>{item.key}. {item.text}</Column>
+              </Row>
             }
           />
           <Title>{contentKey.SYLLABUS_TITLE_NUMBERS}</Title>
           <Text>{contentKey.RED_NUMBERS_SUBHEADING}</Text>
-          <Text>{contentKey.RED_NUMBERS}</Text>
+          <Row>
+            <Column numberOfColumns={1}>{contentKey.RED_NUMBERS}</Column>
+          </Row>
         </Wrapper>
       )
     }

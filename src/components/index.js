@@ -1,4 +1,6 @@
+export {default as Column } from './Column'
 export { default as HomeMenuItems } from './HomeMenuItems'
 export { default as Title } from './StyledTitle'
+export { default as Row } from './Row'
 export { default as SubMenuItems } from './SubMenuItems'
 export { default as Wrapper } from './Wrapper'

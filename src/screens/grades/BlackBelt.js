@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 
 import contentKey from '../../../content'
-import { Wrapper, Title } from '../../components/'
+import { Wrapper, Title, Row, Column } from '../../components/'
 
 const styles = StyleSheet.create({
 
@@ -37,30 +37,44 @@ class BrownBeltThird extends Component {
     return (
       <Wrapper>
         <Title>{contentKey.SYLLABUS_TITLE_TEST}</Title>
-        <Text>{contentKey.FIRST_DAN_BLACK_TEST}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.FIRST_DAN_BLACK_TEST}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_YOGA}</Title>
-        <Text>{contentKey.FIRST_DAN_BLACK_YOGA}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.FIRST_DAN_BLACK_YOGA}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_BASIC_TECHNIQUES}</Title>
-        <Text>{contentKey.FIRST_DAN_BLACK_BASIC_TECHNIQUES}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.FIRST_DAN_BLACK_BASIC_TECHNIQUES}</Column>
+        </Row>
         <Title>{contentKey.SYLLABUS_TITLE_COMBINATION_TECHNIQUES}</Title>
         <FlatList
           data={combinationList}
           renderItem={
             ({item}) =>
-            <Text>{item.key}. {item.textJap}</Text>
+            <Row>
+              <Column numberOfColumns={1}>{item.key}. {item.textJap}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_KATA}</Title>
-        <Text>{contentKey.FIRST_KYU_BROWN_KATA_INTRO}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.FIRST_KYU_BROWN_KATA_INTRO}</Column>
+        </Row>
         <FlatList
           data={kataList}
           renderItem={
             ({item}) =>
-            <Text>{item.key}. {item.textJap}</Text>
+            <Row>
+              <Column numberOfColumns={1}>{item.key}. {item.textJap}</Column>
+            </Row>
           }
         />
         <Title>{contentKey.SYLLABUS_TITLE_DRILL}</Title>
-        <Text>{contentKey.FIRST_KYU_BROWN_DRILL}</Text>
+        <Row>
+          <Column numberOfColumns={1}>{contentKey.FIRST_KYU_BROWN_DRILL}</Column>
+        </Row>
       </Wrapper>
     )
   }
