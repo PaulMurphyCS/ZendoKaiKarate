@@ -48,6 +48,12 @@ const DrawerNavigation = StackNavigator({
 }, {
   headerMode: 'none',
   navigationOptions: ({navigation}) => ({
+    headerTitle: (
+      <Image
+        source={hamburger}
+        style={hamburgerStyle}
+      />
+    ),
     headerStyle: {backgroundColor: CommonStyles.styles.colorStatusBar},
     headerLeft: <TouchableOpacity
       onPress={() => {
@@ -56,10 +62,6 @@ const DrawerNavigation = StackNavigator({
       } else {
         navigation.navigate('DrawerClose')
       }}}>
-      <Image
-        source={hamburger}
-        style={hamburgerStyle}
-      />
     </TouchableOpacity>
   })
 })
