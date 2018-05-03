@@ -15,9 +15,15 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row'
   },
-  imagelogo: {
-    width: 40,
-    height: 40
+  imageLogoWrapper: {
+    justifyContent: 'center',
+    alignSelf:'center',
+    flex: 1
+  },
+  imageLogo: {
+    alignSelf: 'center',
+    width: 45,
+    height: 45
   }
 })
 
@@ -51,7 +57,7 @@ const list = [
 
 class HomeScreen extends Component {
   static navigationOptions = ({ navigation }) => ({
-    title: <Image source={logo} style={styles.imagelogo} />
+    headerTitle: <View style={styles.imageLogoWrapper}><Image source={logo} style={styles.imageLogo} /></View>
   })
   render() {
     return (

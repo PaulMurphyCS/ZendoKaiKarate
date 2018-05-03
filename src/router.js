@@ -26,14 +26,12 @@ import BrownBeltThird from './screens/grades/BrownBeltThird'
 import BrownBeltSecond from './screens/grades/BrownBeltSecond'
 import BrownBeltFirst from './screens/grades/BrownBeltFirst'
 import BlackBelt from './screens/grades/BlackBelt'
+import KataPinanShodan from './screens/kata/KataPinanShodan'
 import contentKey from '../content'
 import hamburger from './images/hamburger_.png'
 import logo from './images/logo.png'
 const CommonStyles = require('../styles/common')
 
-const hamburgerStyle = {
-  marginLeft: 10
-}
 const DrawerStack = DrawerNavigator({
   Home: { screen: HomeScreen },
   Grades: { screen: Grades },
@@ -48,21 +46,8 @@ const DrawerNavigation = StackNavigator({
 }, {
   headerMode: 'none',
   navigationOptions: ({navigation}) => ({
-    headerTitle: (
-      <Image
-        source={hamburger}
-        style={hamburgerStyle}
-      />
-    ),
     headerStyle: {backgroundColor: CommonStyles.styles.colorStatusBar},
-    headerLeft: <TouchableOpacity
-      onPress={() => {
-      if (navigation.state.index === 0) {
-        navigation.navigate('DrawerOpen')
-      } else {
-        navigation.navigate('DrawerClose')
-      }}}>
-    </TouchableOpacity>
+    titleStyle: {textAlign: 'center'}
   })
 })
 
@@ -83,8 +68,8 @@ const PrimaryNav = StackNavigator({
   BrownBeltThird: { screen: BrownBeltThird },
   BrownBeltSecond: { screen: BrownBeltSecond },
   BrownBeltFirst: { screen: BrownBeltFirst},
-  BlackBelt: { screen: BlackBelt}
-  // drawerStack: { screen: DrawerNavigation }
+  BlackBelt: { screen: BlackBelt},
+  KataPinanShodan: { screen: KataPinanShodan}
 }, {
   headerMode: 'float',
   initialRouteName: 'Home',

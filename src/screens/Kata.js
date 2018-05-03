@@ -21,11 +21,7 @@ const styles = StyleSheet.create({
 })
 
 const list = [
-  {
-    key: '1',
-    title: contentKey.PINAN_SHODAN,
-    link: 'RedBelt'
-  },
+  { key: '1', title: contentKey.PINAN_SHODAN, link: 'KataPinanShodan', bgColor: CommonStyles.styles.colorOrangeBelt },
   {
     key: '2',
     title: contentKey.PINAN_NIDAN,
@@ -124,6 +120,7 @@ class KataScreen extends Component {
               title={item.title}
               link={item.link}
               navigation={this.props.navigation}
+              bgColor={item.bgColor}
               />
             }
           />
