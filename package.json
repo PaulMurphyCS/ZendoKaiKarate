@@ -17,6 +17,7 @@
   "dependencies": {
     "react": "16.0.0-alpha.12",
     "react-native": "0.50.4",
+    "react-native-af-video-player": "^0.1.9",
     "react-native-carousel-control": "git+https://github.com/connected-space/react-native-carousel-control.git#v1.1.4-WL-659",
     "react-native-swiper": "^1.5.13",
     "react-navigation": "^1.5.2",

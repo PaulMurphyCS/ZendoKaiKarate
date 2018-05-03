@@ -157,6 +157,11 @@ signingConfigs {
 }
 
 dependencies {
+    compile project(':react-native-linear-gradient')
+    compile project(':react-native-orientation')
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-keep-awake')
+    compile project(':react-native-video')
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.facebook.react:react-native:+'

@@ -10,16 +10,18 @@ import {
 const width = Dimensions.get('window').width
 
 import contentKey from '../../../content'
-import { Wrapper, Title, Row, Column } from '../../components/'
+import { Title, Row, Column, VideoWrapper } from '../../components/'
+
 import Swiper from 'react-native-swiper'
+import Video from 'react-native-af-video-player'
 
 const stepOne = require('../../images/pinan-shodan/pinan_shodan_Layer-1.png')
 const stepTwo = require('../../images/pinan-shodan/pinan_shodan_Layer-2.png')
 const stepThree = require('../../images/pinan-shodan/pinan_shodan_Layer-3.png')
 const stepFour = require('../../images/pinan-shodan/pinan_shodan_Layer-4.png')
 const stepFive = require('../../images/pinan-shodan/pinan_shodan_Layer-5.png')
+const url = require('../../video/pinan-shodan.mp4')
 
-// image width and height; eg: 298 x 136px
 const imageRatio = 300 / 192
 
 const styles = StyleSheet.create({
@@ -33,12 +35,27 @@ const styles = StyleSheet.create({
 })
 
 class KataPinanShodan extends Component {
-  static navigationOptions = ({ navigation }) => ({
-    title: contentKey.PINAN_SHODAN
-  })
+  static navigationOptions = ({ navigation }) => {
+    const { state } = navigation
+    const header = state.params && (state.params.fullscreen ? undefined : null)
+    const tabBarVisible = state.params ? state.params.fullscreen : true
+    return {
+      title: contentKey.PINAN_SHODAN,
+      header,
+      tabBarVisible
+    }
+
+  }
+
+  onFullScreen(status) {
+    this.props.navigation.setParams({
+      fullscreen: !status
+    })
+  }
   render() {
     return (
-      <Wrapper>
+      <VideoWrapper>
+        <View></View>
         <Title>Kata</Title>
         <Text>Click through each step of the kata.</Text>
         <View>
@@ -56,8 +73,11 @@ class KataPinanShodan extends Component {
         </Swiper>
         </View>
         <Text>Watch the Kata performed the whole way through.</Text>
-        <Text>Video goes here.</Text>
-      </Wrapper>
+        <Video
+          url={url}
+          onFullScreen={status => this.onFullScreen(status)}
+        />
+      </VideoWrapper>
     )
   }
 }
