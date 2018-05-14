@@ -12,10 +12,9 @@ const width = Dimensions.get('window').width
 
 const styles = StyleSheet.create({
   wrapper: {
-    width: width - 20,
+    width: width - 30,
     marginVertical: 10,
-    marginHorizontal: 10,
-    padding: 15
+    marginHorizontal: 15
   }
 })
 

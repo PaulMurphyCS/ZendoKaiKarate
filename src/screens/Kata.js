@@ -23,10 +23,7 @@ const styles = StyleSheet.create({
 const list = [
   { key: '1', title: contentKey.PINAN_SHODAN, link: 'KataPinanShodan', bgColor: CommonStyles.styles.colorOrangeBelt },
   {
-    key: '2',
-    title: contentKey.PINAN_NIDAN,
-    link: 'RedBelt'
-  },
+    key: '2', title: contentKey.PINAN_NIDAN,   link: 'KataPinanNidan', bgColor: CommonStyles.styles.colorGreenBelt},
   {
     key: '3',
     title: contentKey.PINAN_SANDAN,

@@ -27,6 +27,8 @@ import BrownBeltSecond from './screens/grades/BrownBeltSecond'
 import BrownBeltFirst from './screens/grades/BrownBeltFirst'
 import BlackBelt from './screens/grades/BlackBelt'
 import KataPinanShodan from './screens/kata/KataPinanShodan'
+import KataPinanNidan from './screens/kata/KataPinanNidan'
+import DrillPinanShodan from './screens/drills/DrillPinanShodan'
 import contentKey from '../content'
 import hamburger from './images/hamburger_.png'
 import logo from './images/logo.png'
@@ -69,7 +71,9 @@ const PrimaryNav = StackNavigator({
   BrownBeltSecond: { screen: BrownBeltSecond },
   BrownBeltFirst: { screen: BrownBeltFirst},
   BlackBelt: { screen: BlackBelt},
-  KataPinanShodan: { screen: KataPinanShodan}
+  KataPinanShodan: { screen: KataPinanShodan},
+  KataPinanNidan: { screen: KataPinanNidan},
+  DrillPinanShodan: { screen: DrillPinanShodan}
 }, {
   headerMode: 'float',
   initialRouteName: 'Home',

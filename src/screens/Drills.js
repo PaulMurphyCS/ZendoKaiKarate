@@ -8,8 +8,9 @@ import {
   Button
 } from 'react-native'
 
-import HomeMenuItems from '../components/HomeMenuItems'
+import SubMenuItems from '../components/SubMenuItems'
 import contentKey from '../../content'
+const CommonStyles = require('../../styles/common')
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -19,68 +20,14 @@ const styles = StyleSheet.create({
 })
 
 const list = [
-  {
-    key: '1',
-    title: 'Orange Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '2',
-    title: 'Orange Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '3',
-    title: 'Orange Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '4',
-    title: 'Green Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '5',
-    title: 'Blue Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '6',
-    title: 'Purple Belt',
-    link: 'RedBelt'
-  },
-  {
-    key: '7',
-    title: 'Brown Belt 3rd ku',
-    link: 'RedBelt'
-  },
-  {
-    key: '8',
-    title: 'Brown Belt 2nd ku',
-    link: 'RedBelt'
-  },
-  {
-    key: '9',
-    title: 'Brown Belt 1st ku',
-    link: 'RedBelt'
-  },
-  {
-    key: '10',
-    title: 'Black Belt',
-    link: 'RedBelt'
-  }
-  ,
-  {
-    key: '11',
-    title: 'Translations',
-    link: 'RedBelt'
-  }
-  ,
-  {
-    key: '12',
-    title: 'Stances',
-    link: 'RedBelt'
-  }
+  { key: '1', title: contentKey.DRILL_ONE, link: 'DrillPinanShodan', bgColor: CommonStyles.styles.colorOrangeBelt },
+  { key: '2', title: contentKey.GREEN_BELT, link: 'GreenBelt', bgColor: CommonStyles.styles.colorGreenBelt },
+  { key: '3', title: contentKey.BLUE_BELT, link: 'BlueBelt', bgColor: CommonStyles.styles.colorBlueBelt },
+  { key: '4', title: contentKey.PURPLE_BELT, link: 'PurpleBelt', bgColor: CommonStyles.styles.colorPurpleBelt },
+  { key: '5', title: contentKey.THIRD_KYU_BROWN_BELT, link: 'BrownBeltThird', bgColor: CommonStyles.styles.colorBrownBelt },
+  { key: '6', title: contentKey.SECOND_KYU_BROWN_BELT, link: 'BrownBeltSecond', bgColor: CommonStyles.styles.colorBrownBelt },
+  { key: '7', title: contentKey.FIRST_KYU_BROWN_BELT, link: 'BrownBeltFirst', bgColor: CommonStyles.styles.colorBrownBelt },
+  { key: '8', title: contentKey.FIRST_DAN_BLACK_BELT, link: 'BlackBelt', bgColor: CommonStyles.styles.colorBlackBelt }
 ]
 
 class DrillScreen extends Component {
@@ -95,10 +42,11 @@ class DrillScreen extends Component {
             data={list}
             renderItem={
               ({item}) =>
-              <HomeMenuItems
+              <SubMenuItems
               title={item.title}
               link={item.link}
               navigation={this.props.navigation}
+              bgColor={item.bgColor}
               />
             }
           />
